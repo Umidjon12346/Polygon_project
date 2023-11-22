@@ -16,7 +16,7 @@ class Circle:
         """
         return False
     
-    def diameter(self) -> float:
+    def diameter(self,radius) -> float:
         '''
         This method finds the diameter of the circle.
         Args:
@@ -24,7 +24,8 @@ class Circle:
         Returns:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
-        return self.radius *2
+        a = self.radius * 2
+        return a
     
     def circumference(self) -> float:
         '''
@@ -34,7 +35,8 @@ class Circle:
         Returns:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        return pi*Circle.diameter
+        
     
     def area(self) -> float:
         '''
@@ -44,4 +46,6 @@ class Circle:
         Returns:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        return pi*self.radius**2
+p1 = Circle(25)
+print(p1.area)
